@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yunth 生VC美白美容液の動画広告制作向けターゲット・訴求・表現管理まとめ">
+  <title>Yunth 生VC美白美容液 広告戦略まとめ</title>
+  <style>
+    :root {
+      --ink: #202027;
+      --muted: #6f6b72;
+      --line: #e8dde1;
+      --paper: #fffaf9;
+      --rose: #e87086;
+      --rose-soft: #fff0f3;
+      --gold: #b98832;
+      --lemon: #ffe779;
+      --teal: #1f8a8a;
+      --teal-soft: #e9f7f5;
+      --blue: #315f94;
+      --blue-soft: #eef5ff;
+      --danger: #bd3150;
+      --ok: #238160;
+      --shadow: 0 18px 44px rgba(32, 32, 39, 0.08);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      line-height: 1.75;
+      background: linear-gradient(180deg, #fff7f7 0%, #ffffff 36%, #f8fbff 100%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(232, 221, 225, 0.86);
+      background: rgba(255, 250, 249, 0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 60px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      min-width: 190px;
+    }
+
+    .brand strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.2;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+
+    nav a {
+      padding: 8px 10px;
+      border: 1px solid transparent;
+      color: #4d4a50;
+      font-size: 12px;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      border-color: var(--line);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 58px 0 42px;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(110deg, rgba(255, 246, 248, 0.95) 0%, rgba(255, 255, 255, 0.88) 52%, rgba(233, 247, 245, 0.82) 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      color: var(--rose);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--rose);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", serif;
+      font-size: clamp(36px, 5vw, 66px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin: 22px 0 0;
+      color: #504b52;
+      font-size: 18px;
+    }
+
+    .hero-point {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 28px 0 0;
+    }
+
+    .stat {
+      min-height: 96px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 10px 30px rgba(232, 112, 134, 0.08);
+    }
+
+    .stat b {
+      display: block;
+      color: var(--rose);
+      font-size: 25px;
+      line-height: 1.1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .product-frame {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .product-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .product-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+      background: #fff;
+    }
+
+    main {
+      padding: 42px 0 70px;
+    }
+
+    section {
+      padding: 38px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(180px, 0.33fr) minmax(0, 0.67fr);
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .kicker {
+      margin: 0;
+      color: var(--rose);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", serif;
+      font-size: clamp(26px, 3.5vw, 42px);
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid.four {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: 0 12px 32px rgba(32, 32, 39, 0.055);
+    }
+
+    .card.soft-rose {
+      background: var(--rose-soft);
+    }
+
+    .card.soft-teal {
+      background: var(--teal-soft);
+    }
+
+    .card.soft-blue {
+      background: var(--blue-soft);
+    }
+
+    .summary {
+      position: relative;
+      padding: 28px;
+      border: 1px solid #e8c8cf;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .summary::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 6px;
+      background: linear-gradient(180deg, var(--rose), var(--gold));
+    }
+
+    .summary strong {
+      color: var(--danger);
+    }
+
+    .big-copy {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", serif;
+      font-size: clamp(24px, 3vw, 38px);
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #57515a;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .persona {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.38fr) minmax(0, 0.62fr);
+      gap: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .persona-side {
+      padding: 26px;
+      color: #fff;
+      background: linear-gradient(160deg, #31323a, #bd6d7e);
+    }
+
+    .persona-side b {
+      display: block;
+      font-size: 44px;
+      line-height: 1;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .persona-side span {
+      display: block;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 13px;
+    }
+
+    .persona-body {
+      padding: 26px;
+    }
+
+    .persona-body ul,
+    .plain-list {
+      margin: 0;
+      padding-left: 1.1em;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .flow {
+      display: grid;
+      gap: 10px;
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .flow-step .time {
+      display: grid;
+      place-items: center;
+      min-height: 48px;
+      border: 1px solid #f0c9d0;
+      color: var(--rose);
+      font-size: 13px;
+      font-weight: 800;
+      background: var(--rose-soft);
+    }
+
+    .flow-step strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 16px;
+    }
+
+    .flow-step span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .quote-box {
+      display: grid;
+      gap: 10px;
+    }
+
+    .copy-line {
+      padding: 14px 16px;
+      border-left: 4px solid var(--rose);
+      background: #fff;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: 0 12px 32px rgba(32, 32, 39, 0.055);
+    }
+
+    .matrix th,
+    .matrix td {
+      padding: 14px 15px;
+      border-bottom: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .matrix th {
+      color: #fff;
+      background: #34343c;
+      font-size: 13px;
+    }
+
+    .matrix tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 6px;
+      padding: 2px 8px;
+      color: #fff;
+      background: var(--teal);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .label.warn {
+      background: var(--danger);
+    }
+
+    .safe {
+      border-color: rgba(35, 129, 96, 0.25);
+      background: #f1fbf7;
+    }
+
+    .risk {
+      border-color: rgba(189, 49, 80, 0.24);
+      background: #fff3f5;
+    }
+
+    .callout {
+      padding: 18px 20px;
+      border: 1px solid #ecd093;
+      border-radius: var(--radius);
+      background: #fff9e5;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #7d5517;
+    }
+
+    .source-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .source-list a {
+      display: block;
+      padding: 13px 14px;
+      border: 1px solid var(--line);
+      background: #fff;
+      text-decoration: none;
+    }
+
+    .source-list a:hover {
+      border-color: var(--rose);
+    }
+
+    footer {
+      padding: 28px 0 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      background: #fff;
+    }
+
+    @media (max-width: 880px) {
+      .topbar {
+        position: static;
+      }
+
+      .topbar .wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+        padding-top: 12px;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        padding-bottom: 12px;
+      }
+
+      .hero-grid,
+      .section-head,
+      .grid.two,
+      .grid.three,
+      .grid.four,
+      .persona {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .hero-point {
+        grid-template-columns: 1fr;
+      }
+
+      .product-caption {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .wrap {
+        width: min(100% - 28px, 1120px);
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .summary,
+      .persona-side,
+      .persona-body,
+      .card {
+        padding: 18px;
+      }
+
+      .flow-step {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .matrix th,
+      .matrix td {
+        min-width: 180px;
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="wrap">
+        <div class="brand" aria-label="Yunth advertising strategy">
+          <strong>Yunth VC</strong>
+          <span>広告制作向け 戦略メモ</span>
+        </div>
+        <nav aria-label="ページ内ナビゲーション">
+          <a href="#target">届ける相手</a>
+          <a href="#why">選ばれる理由</a>
+          <a href="#route">勝ち導線</a>
+          <a href="#creative">CR設計</a>
+          <a href="#words">表現管理</a>
+          <a href="#sources">参考</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">FOR AD PRODUCTION</p>
+          <h1>Yunthは、<br>誰にどう届けるべきか。</h1>
+          <p class="lead">
+            公式LP、ぎいちゃんのプロデュース資料、note記事「なぜYunthは選ばれているのか」を統合した、動画広告制作のための共有メモ。
+            きれいな美容液広告ではなく、<strong>迷っていた人に「今なら試す理由」を作る広告</strong>として整理する。
+          </p>
+          <div class="hero-point" aria-label="重要数値と訴求">
+            <div class="stat">
+              <b>30秒</b>
+              <span>使用期限という強い記憶フック。個包装の必然性を作る。</span>
+            </div>
+            <div class="stat">
+              <b>1,980円</b>
+              <span>気になっていた人の背中を押す初回価格。特典とセットで効く。</span>
+            </div>
+            <div class="stat">
+              <b>30-44歳</b>
+              <span>濃い悩みより「このままだと不安」が強い予防美容層。</span>
+            </div>
+          </div>
+        </div>
+        <figure class="product-frame">
+          <img src="https://d2w53g1q050m78.cloudfront.net/yunthjp/uploads/_lp/essence/02/img_takei/fv2.jpg" alt="Yunth 生VC美白美容液の商品パッケージと個包装パウチ">
+          <figcaption class="product-caption">
+            <span>主役は箱よりも、1包のパウチ。鮮度・衛生感・使い切り感の証拠になる。</span>
+            <span>Image: Yunth公式LP掲載素材</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <main>
+      <section id="target">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">01 Target</p>
+              <h2>一番届ける相手</h2>
+            </div>
+            <p>
+              「シミに深く悩んでいる人」ではなく、「夏前に早めのケアをしたいけど、Yunthを買う理由がまだ足りなかった人」。
+              悩みの強さより、購入直前の迷いをほどく方が勝ちやすい。
+            </p>
+          </div>
+
+          <div class="summary">
+            <p class="big-copy">
+              主対象は、<strong>Yunthが気になっていたけど、高いし定期も不安で止まっていた30-44歳</strong>。
+            </p>
+            <div class="chips">
+              <span class="chip">夏前のシミ予防</span>
+              <span class="chip">生ビタミンCが気になる</span>
+              <span class="chip">失敗したくない</span>
+              <span class="chip">価格で迷っていた</span>
+              <span class="chip">忙しい朝でも続けたい</span>
+            </div>
+          </div>
+
+          <div class="persona" style="margin-top: 18px;">
+            <div class="persona-side">
+              <b>39</b>
+              <span>理央さんタイプ / 会社員・家庭あり・美容液は慎重に選ぶ</span>
+            </div>
+            <div class="persona-body">
+              <h3>購買スイッチ</h3>
+              <ul>
+                <li>日差しを浴びた日の肌不安、メイク前のくすみ印象、ハリツヤ不足が気になり始めている。</li>
+                <li>Yunthは見たことがあり、商品名もなんとなく知っている。けれど通常価格や定期購入で止まっていた。</li>
+                <li>「使用期限30秒の生VCを、毎回1包ずつ開けたてで使える」と聞くと、価格に納得感が出る。</li>
+                <li>最後に初回1,980円、送料無料、特典つきで「今なら試していいかも」になる。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid three" style="margin-top: 14px;">
+            <div class="card soft-rose">
+              <h3>Primary</h3>
+              <p>30-44歳。夏前にシミ対策を始めたいが、美白美容液選びに迷っている人。</p>
+            </div>
+            <div class="card soft-teal">
+              <h3>Secondary</h3>
+              <p>個包装・衛生感・持ち運び・使い切りに価値を感じる人。旅行やジム導線も合う。</p>
+            </div>
+            <div class="card soft-blue">
+              <h3>Not Main</h3>
+              <p>濃いシミを今すぐ消したい人、刺激ゼロを最優先する人。期待値がズレやすい。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">02 Why Chosen</p>
+              <h2>note記事から吸うべきこと</h2>
+            </div>
+            <p>
+              記事のポイントは、Yunthが「バズったから売れた」ではなく、商品・言葉・SNS接点・デザインが同じ方向を向いているブランドだということ。
+              広告では、この構造を壊さずに購入理由へ接続する。
+            </p>
+          </div>
+
+          <div class="grid four">
+            <div class="card">
+              <h3>商品力が説明を支える</h3>
+              <p>個包装、使用期限30秒、水不使用、アスコルビン酸。珍しさではなく、フレッシュに使う理由として見せる。</p>
+            </div>
+            <div class="card">
+              <h3>SNSで判断材料が揃う</h3>
+              <p>購入前にテクスチャー、使用感、合う人・合わない人を想像できる。広告は初見説明より「見たことある」を購入へ進める役。</p>
+            </div>
+            <div class="card">
+              <h3>言葉が迷わせない</h3>
+              <p>「生VC」「使用期限30秒」「水不使用」のように、短くて意味が伝わる言葉を使う。難しい成分説明に逃げない。</p>
+            </div>
+            <div class="card">
+              <h3>引き算のデザイン</h3>
+              <p>余白、視線誘導、同じ商品画像の反復で世界観を作る。広告も情報を盛るほど、Yunthらしさから遠ざかる。</p>
+            </div>
+          </div>
+
+          <div class="callout" style="margin-top: 16px;">
+            <strong>広告に翻訳すると</strong>
+            <p>
+              Yunthは「知らない商品をゼロから説明する広告」より、すでに少し知っている人へ
+              <strong>“なぜ今買っていいのか”</strong>を渡す広告が強い。美しい世界観だけで終わらせず、最後は価格・特典・期限で行動理由を作る。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="route">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">03 Winning Route</p>
+              <h2>勝ち導線</h2>
+            </div>
+            <p>
+              LPとぎいちゃん資料の芯は、悩みを選ばせてから商品理解へ入り、最後にオファーで背中を押すこと。
+              きれいな肌映像だけではなく、パウチ・価格・特典を買う理由として見せる。
+            </p>
+          </div>
+
+          <div class="flow">
+            <div class="flow-step">
+              <div class="time">0-3秒</div>
+              <div>
+                <strong>違和感フックで止める</strong>
+                <span>「Yunth、高いと思ってた人へ」「夏前にシミを作らせないケア」など、今の迷いに刺す。</span>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="time">3-12秒</div>
+              <div>
+                <strong>悩みを一つ選ばせる</strong>
+                <span>シミ予防、くすみ印象、乾燥による毛穴目立ち。濃い悩みではなく予防意識へ寄せる。</span>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="time">12-28秒</div>
+              <div>
+                <strong>生VCと個包装の必然性</strong>
+                <span>パウチ開封、液が出る瞬間、肌にのせる直前。個包装は便利さではなく鮮度の証拠。</span>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="time">28-45秒</div>
+              <div>
+                <strong>医薬部外品の価値を正確に</strong>
+                <span>メラニンの生成を抑え、しみ・そばかすを防ぐ。既存のシミが消える話にはしない。</span>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="time">45-65秒</div>
+              <div>
+                <strong>本品と特典を一気に見せる</strong>
+                <span>箱、パウチ、シートマスク、化粧水パウチ、レチノールなど。物量で「今買う理由」を作る。</span>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="time">65-90秒</div>
+              <div>
+                <strong>価格・期限・CTA</strong>
+                <span>初回1,980円、50%OFF、送料無料。定期条件は簡単と言い切らず、詳細はLP確認へ。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="creative">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">04 Creative Design</p>
+              <h2>動画広告の作り方</h2>
+            </div>
+            <p>
+              生VC鮮度型を本命にして、季節・価格・復帰購入・悩み別へ横展開する。画のピントはモデルの美肌より、パウチとテクスチャー。
+            </p>
+          </div>
+
+          <table class="matrix" aria-label="クリエイティブルート">
+            <thead>
+              <tr>
+                <th>ルート</th>
+                <th>冒頭</th>
+                <th>刺す不安</th>
+                <th>撮るべき画</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="label">本命</span><br>生VC鮮度型</td>
+                <td>生ビタミンCを、毎回開けたてで。</td>
+                <td>高い美容液なら、ちゃんとフレッシュな状態で使いたい。</td>
+                <td>1包を持つ指、切り口、液が出る瞬間、肌にのせる直前。</td>
+              </tr>
+              <tr>
+                <td><span class="label">強い</span><br>価格迷い型</td>
+                <td>Yunth、高いと思ってた人へ。</td>
+                <td>気になっていたけど、通常価格や定期で止まっていた。</td>
+                <td>価格、特典、本品を並べる。押し売りより「今なら試しやすい」。</td>
+              </tr>
+              <tr>
+                <td><span class="label">季節</span><br>夏前シミ予防型</td>
+                <td>夏に向けて、シミを作らせないケア。</td>
+                <td>日差しが強くなる前に、何か始めた方がいい気がする。</td>
+                <td>朝の洗面台、窓辺の日差し、頬を見る自然な動き。</td>
+              </tr>
+              <tr>
+                <td><span class="label">横展開</span><br>悩み別LP直結型</td>
+                <td>くすみ印象、乾燥毛穴、シミ対策で字幕差し替え。</td>
+                <td>肌悩みは一つではない。自分に関係ある入口が欲しい。</td>
+                <td>鼻横、頬、口元、メイク前の肌確認。超接写比較は避ける。</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="grid two" style="margin-top: 18px;">
+            <div class="card">
+              <h3>冒頭コピー案</h3>
+              <div class="quote-box">
+                <p class="copy-line">Yunth、高いと思ってた人へ。</p>
+                <p class="copy-line">使用期限30秒。だから、1包ずつ。</p>
+                <p class="copy-line">夏前のシミ対策、洗顔後に+1。</p>
+                <p class="copy-line">個包装は便利さじゃなく、鮮度のため。</p>
+              </div>
+            </div>
+            <div class="card">
+              <h3>画づくりのルール</h3>
+              <ul class="plain-list">
+                <li>パウチを切る音、液が出る音、手のひらの質感を撮る。</li>
+                <li>肌は白く加工しすぎず、自然光で「朝のケア」に寄せる。</li>
+                <li>注釈スペースを必ず空ける。美白、浸透、毛穴、ツヤは文脈が命。</li>
+                <li>価格と特典は最後に整理。途中で売り込みすぎると商品理解が浅くなる。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="words">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">05 Expression</p>
+              <h2>使う言葉・避ける言葉</h2>
+            </div>
+            <p>
+              Yunthは言葉が強い商品なので、盛るより削る。薬機法・景表法上も、期待値を上げすぎず、公式表現に寄せる。
+            </p>
+          </div>
+
+          <div class="grid two">
+            <div class="card safe">
+              <h3><span class="label">使いやすい</span></h3>
+              <ul class="plain-list">
+                <li>生ビタミンC / 有効成分アスコルビン酸</li>
+                <li>使用期限30秒という発想</li>
+                <li>毎回開けたて / 1回分ずつ</li>
+                <li>水を1滴も含まない濃密な一滴</li>
+                <li>メラニンの生成を抑え、しみ・そばかすを防ぐ</li>
+                <li>洗顔後、化粧水の前に+1</li>
+                <li>初回1,980円 / 50%OFF / 送料無料 / 特典つき</li>
+              </ul>
+            </div>
+            <div class="card risk">
+              <h3><span class="label warn">避ける</span></h3>
+              <ul class="plain-list">
+                <li>シミが消える / 薄くなる</li>
+                <li>即効で白くなる</li>
+                <li>毛穴がなくなる</li>
+                <li>酸化しない / 劣化しない</li>
+                <li>刺激ゼロ / 敏感肌でも絶対安心</li>
+                <li>無臭 / 軽い美容液 / さらさら</li>
+                <li>30秒を過ぎると使えない</li>
+                <li>定期でも簡単にやめられると言い切る</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Sources</p>
+              <h2>参考リンク</h2>
+            </div>
+            <p>
+              このページは下記資料を要約・広告制作向けに再構成したもの。記事本文の再掲ではなく、制作判断に必要な要点だけに絞っている。
+            </p>
+          </div>
+
+          <ul class="source-list">
+            <li><a href="https://yunth.jp/lp?u=es-nht-in-sk" target="_blank" rel="noreferrer">Yunth 公式LP</a></li>
+            <li><a href="https://aykkrg1296-sketch.github.io/yunth-ad-production-hub/" target="_blank" rel="noreferrer">ぎいちゃんまとめ / Yunth VC Production Hub</a></li>
+            <li><a href="https://note.com/beautycreative/n/n5974e7edb89a" target="_blank" rel="noreferrer">note記事 / なぜYunthは選ばれているのか</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>Yunth 生VC美白美容液 動画広告制作メモ / 2026-05-27 作成</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
